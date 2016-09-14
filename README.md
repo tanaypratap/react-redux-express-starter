@@ -14,6 +14,7 @@ Delete the contents of index.js (if you don't need the demo app) and start worki
 * ReactDOM
 * Redux
 * Redux-React
+* React Router
 * Babel
 * Webpack
 * Bootstrap
@@ -32,7 +33,8 @@ All js file is transpiled and then bundled into index_bundle.js which is then in
 
 ### Demo app
 
-You will see a small counter app. While the logic is simple, this app currently implements all redux concepts with react rendering. App serves as a test that all libraries are working perfectly.
+You will see a small counter app. While the logic is simple, this app currently implements all redux concepts with react rendering. It has react router implemented with Redux bindings and has two pages with nested routes.
+App serves as a test that all libraries are working perfectly.
 
 ### Production
     npm run production
@@ -44,5 +46,6 @@ TODO:
 * Rip off all console.log when preparing the file for production.
 * Prepare Express bindings
 * Update demo app to get async calls addressed by Redux as well
-* Redux with React Router support and demo app update
+* React App structure and file separation as the demo app grows
 * Basic boilerplate stuff for full stack app structure
+* Serving file from Express, after Express is running.
