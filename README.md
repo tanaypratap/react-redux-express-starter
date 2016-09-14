@@ -33,7 +33,9 @@ All js file is transpiled and then bundled into index_bundle.js which is then in
 
 ### Demo app
 
-You will see a small counter app. While the logic is simple, this app currently implements all redux concepts with react rendering. It has react router implemented with Redux bindings and has two pages with nested routes.
+You will see a small counter app. While the logic is simple, this app currently implements all redux concepts with react rendering. 
+It tries to provide a basic app structure boilerplate as well to help new users structure their apps.
+It has react router implemented with Redux bindings and has two pages with nested routes.
 App serves as a test that all libraries are working perfectly.
 
 ### Production
@@ -46,6 +48,5 @@ TODO:
 * Rip off all console.log when preparing the file for production.
 * Prepare Express bindings
 * Update demo app to get async calls addressed by Redux as well
-* React App structure and file separation as the demo app grows
 * Basic boilerplate stuff for full stack app structure
 * Serving file from Express, after Express is running.
