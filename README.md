@@ -33,10 +33,11 @@ All js file is transpiled and then bundled into index_bundle.js which is then in
 
 ### Demo app
 
-You will see a small counter app. While the logic is simple, this app currently implements all redux concepts with react rendering. 
-It tries to provide a basic app structure boilerplate as well to help new users structure their apps.
-It has react router implemented with Redux bindings and has two pages with nested routes.
-App serves as a test that all libraries are working perfectly.
+* You will see a small counter app. While the logic is simple, this app currently implements all redux concepts with react rendering. 
+* It tries to provide a basic app structure boilerplate as well to help new users structure their apps.
+* All react components are written using functional paradigm.
+* It has react router implemented with Redux bindings and has two pages with nested routes.
+* App serves as a test that all libraries are working perfectly.
 
 ### Production
     npm run production
