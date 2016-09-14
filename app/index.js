@@ -1,4 +1,43 @@
 import React, { Component, PropTypes } from 'react'
+import { Link } from 'react-router'
+
+var Welcome = React.createClass({
+    render: function(){
+        return (
+             <div className="container">
+                <div className="jumbotron" style= {{backgroundColor :'transparent'}}> 
+                    <h2 className="text-center"> Welcome to Counter App  </h2>                     
+                     <br/> <p className="text-right"> Counter App to show redux and react working! </p>                    
+                </div>
+            </div>
+        )
+    }
+})
+
+var App = React.createClass({
+    render: function(){
+        const {children} = this.props
+        return (
+                <div>
+                    
+                    <div className="container navbar navbar-default">
+                        <ul className="nav navbar-nav">
+                            <li> <Link to="/" > Home </Link> </li>
+                            <li> <Link to="/counter"> Counter </Link> </li>
+                        </ul>
+                    </div>  
+                        
+                   
+
+                    {children}
+                </div>
+
+               
+
+            )
+    }
+})
+
 
 var ReduxCounter = React.createClass({
     render: function() {
@@ -66,14 +105,22 @@ const mapDispatchToProps = (dispatch) => {
 const CounterContainer = connect(
     mapStateToProps,
     mapDispatchToProps
-)(ReduxCounter)
+)(ReduxCounter) // the store subscription is done here when you match state to Props
 
 
 // React DOM part
+// React Router 
+
 import ReactDOM from 'react-dom'
+import { Router, Route, browserHistory } from 'react-router'
 const render = () => ReactDOM.render(
-    <Provider store={store}>
-        <CounterContainer/>
+    <Provider store={store}>        
+        <Router history={browserHistory}>
+            <Route component={App}>
+                <Route path='counter' component={CounterContainer} />
+                <Route path='/' component = {Welcome} />
+            </Route>
+        </Router>
     </Provider>,    
     app
 
@@ -81,6 +128,3 @@ const render = () => ReactDOM.render(
 
 // Initial render
 render()
-
-// Subscribe to store changes
-store.subscribe(render)
