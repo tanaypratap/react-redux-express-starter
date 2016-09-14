@@ -5,7 +5,8 @@ react-redux-express starter kit
 An opinionated starter kit for full stack react with redux and expressjs at background. Inbuilt tools like webpack, babel, es6, bower etc. configured.
 
 ## Install
-Download the zip from github, copy or rename to a new folder of your project name and start working.
+Download the zip from github, copy or rename to a new folder of your project name.
+Delete the contents of index.js (if you don't need the demo app) and start working.
 
 
 ## Currently Supports
@@ -41,5 +42,7 @@ TODO:
 
 ### TODOS
 * Rip off all console.log when preparing the file for production.
-* Prepare express bindings
+* Prepare Express bindings
 * Update demo app to get async calls addressed by Redux as well
+* Redux with React Router support and demo app update
+* Basic boilerplate stuff for full stack app structure
