@@ -18,12 +18,22 @@ Delete the contents of index.js (if you don't need the demo app) and start worki
 * Babel
 * Webpack
 * Bootstrap
+* redux-promise
+* fetch
 
 out of the box. 
 
 ## Run the starter kit
 
 ### Development
+
+#### For React-Redux frontend app
+    cd react-app
+    npm install
+    npm start
+
+#### For Express Backend REST API app
+    cd express-api
     npm install
     npm start
 
@@ -37,7 +47,14 @@ All js file is transpiled and then bundled into index_bundle.js which is then in
 * It tries to provide a basic app structure boilerplate as well to help new users structure their apps.
 * All react components are written using functional paradigm.
 * It has react router implemented with Redux bindings and has two pages with nested routes.
+* Updated demo app to get aysnc calls with Redux
+* A simple expressjs backend to show how a react app will work with backend REST APIs.
 * App serves as a test that all libraries are working perfectly.
+
+### Full Stack Architecture
+Currently webpack is serving the front end app but it can be served by any server (NGINX, Apache) as the final app is just two files, index.html and index_bundle.js along with bower_components folder.
+
+Once this app gets downloaded on client's machine it sends request to the REST API server. This server currently is implemented using Express JS and there's no database attached to it. However, this is a completely separated backend and can be done like any usual Node/Java/PHP etc. backend with Oracle/Mongo/MySQL database interaction.
 
 ### Production
     npm run production
@@ -47,7 +64,3 @@ TODO:
 
 ### TODOS
 * Rip off all console.log when preparing the file for production.
-* Prepare Express bindings
-* Update demo app to get async calls addressed by Redux as well
-* Basic boilerplate stuff for full stack app structure
-* Serving file from Express, after Express is running.

@@ -1,5 +1,6 @@
 import ReduxCounter from '../components/ReduxCounter'
 import { connect } from 'react-redux'
+import { getRandomNumber } from '../reducers/counter'
 
 const mapStateToProps = (state) => {
    return { count : state }
@@ -13,6 +14,23 @@ const mapDispatchToProps = (dispatch) => {
 
         onDecrement : () => {
             dispatch({type: 'DECREMENT'})
+        },
+
+        onAsyncCall : () => {
+                dispatch(getRandomNumber()).then((response) => {
+                    if (!response.error) {
+                        let number = response.payload.number                    
+                        dispatch({type: 'DATA_SUCCESS', payload: number})
+                    }
+
+                    else {
+                        dispatch({type: 'DATA_ERROR'})
+                    }
+                   
+            });
+
+            
+            
         }
     }
 }
