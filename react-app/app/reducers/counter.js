@@ -1,3 +1,6 @@
+import { combineReducers } from 'redux'
+import { reducer as formReducer }  from 'redux-form' 
+
 // Redux Reducer
 export const counter = (state=0, action) => {
 
@@ -41,3 +44,11 @@ export function getRandomNumber() {
         payload: request
     }
 }
+
+var reducers = {
+    counter : counter,
+    form: formReducer
+}
+
+export var reducer = combineReducers(reducers)
+

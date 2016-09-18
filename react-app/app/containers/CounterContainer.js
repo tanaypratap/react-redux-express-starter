@@ -3,7 +3,7 @@ import { connect } from 'react-redux'
 import { getRandomNumber } from '../reducers/counter'
 
 const mapStateToProps = (state) => {
-   return { count : state }
+   return { count : state.counter }
 }
 
 const mapDispatchToProps = (dispatch) => {

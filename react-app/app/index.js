@@ -4,7 +4,7 @@ import { createStore, applyMiddleware } from 'redux'
 import { Provider }  from 'react-redux'
 
 import Root from './components/Root'
-import { counter, getData } from './reducers/counter'
+import { reducer, getData } from './reducers/counter'
 
 import createLogger from 'redux-logger'
 
@@ -14,7 +14,7 @@ import fetch from 'isomorphic-fetch'
 
 const loggerMiddleware = createLogger()
 
-let store = createStore(counter,
+export var store = createStore(reducer,
   applyMiddleware(
     promise, // lets us dispatch() functions
     loggerMiddleware // neat middleware that logs actions
@@ -28,3 +28,4 @@ render(
 
 )
 
+//store.dispatch({type: 'DATA_SUCCESS', payload: 5})
