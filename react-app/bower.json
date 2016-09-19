@@ -1,0 +1,27 @@
+{
+  "name": "react-redux-express-starter",
+  "description": "simple but opinionated full stack starter kit for react.js",
+  "main": "index.js",
+  "authors": [
+    "Tanay Pratap (tanay.mit@gmail.com)"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "react",
+    "redux",
+    "express",
+    "babel",
+    "webpack"
+  ],
+  "homepage": "https://github.com/tanaypratap/react-redux-express-starter",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.7"
+  }
+}
