@@ -33,7 +33,7 @@ export const counter = (state=0, action) => {
 // Redux Async Action
 export function getRandomNumber() {
 
-    const request = fetch('http://localhost:3000/random')
+    const request = fetch('http://localhost:8000/api/v1/random')
                     .then((response) => response.json())
 
     return {

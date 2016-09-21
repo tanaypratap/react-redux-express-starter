@@ -5,14 +5,15 @@ import Welcome from './Welcome'
 import CounterContainer from '../containers/CounterContainer'
 import App from './App'
 
-var Root = ({children}) => (
-     <Router history={browserHistory}>
-        <Route component={App}>
+export var routes = (
+    <Route component={App}>
             <Route path='counter' component={CounterContainer} />
             <Route path='/' component = {Welcome} />
-        </Route>
-    </Router>
+    </Route>
+    )
 
+var Root = ({children}) => (
+     <Router history={browserHistory} routes={routes} />     
 )
    
 export default Root
