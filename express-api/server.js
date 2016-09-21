@@ -12,6 +12,7 @@ import cors from 'cors'
 
 var server = express()
 server.use(cors())
+server.use(express.static('../react-app'));
 
 let apiV1 = express.Router()
 
@@ -23,6 +24,7 @@ apiV1.get('/random', (req,res) => {
 server.use('/api/v1', apiV1)
 
 server.use(handleRender)
+
 
 function handleRender(req, res) {
 
@@ -56,12 +58,13 @@ function renderFullPage(html, preloadedState) {
             <html lang="en">
             <head> 
                 <meta charset="UTF-8">
-                <title> Test App </title>
-                <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.min.css"> 
+                <title> Test App </title>                
+                <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.min.css">
             </head>
 
             <body>
                 <div id="app">${html}</div>
+                <script type="text/javascript" src="dist/index_bundle.js"></script></body>
 
             </body>
     `

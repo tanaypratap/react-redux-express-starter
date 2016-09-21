@@ -51,6 +51,21 @@ All js file is transpiled and then bundled into index_bundle.js which is then in
 * A simple expressjs backend to show how a react app will work with backend REST APIs.
 * App serves as a test that all libraries are working perfectly.
 
+#### Universal App (Server Side Rendering)
+ 
+The demo app supports server side rendering using Express. To use this, we need to build the frontend app using
+    cd react-app 
+    npm run production
+
+This will put final bundle files in dist/ folder. This bundle will be then used by Express Server to serve the application. To run the backend server now:
+    cd ../express-api
+    npm start
+
+####BIG TIME TODO:
+1. There are currently two dev servers running, one in Webpack for development of react app and one Express. I need to find out a way where only one server can run dev, build, prod everything! Let me know if you have some ideas.
+
+2. Express is running currently only in dev mode, need to final build the bundle for production usage as well.
+
 ### Full Stack Architecture
 Currently webpack is serving the front end app but it can be served by any server (NGINX, Apache) as the final app is just two files, index.html and index_bundle.js along with bower_components folder.
 

@@ -2,9 +2,9 @@
   "name": "express-api-for-react-redux",
   "version": "0.0.1",
   "description": "simple express api for react-redux app",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
-    "start": "nodemon index.js --exec babel-node --presets es2015,react --plugin transform-react-jsx"
+    "start": "nodemon server.js --exec babel-node --presets es2015,react --plugin transform-react-jsx"
   },
   "keywords": [
     "express"
